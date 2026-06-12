@@ -1,0 +1,31 @@
+{
+  "name": "newurlshortener",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node ./bin/www",
+    "migrate:create": "node-pg-migrate create",
+    "migrate:up": "dotenv -e .env -- node-pg-migrate up --migrations-dir migrations --database-url $DATABASE_URL",
+    "migrate:down": "dotenv -e .env -- node-pg-migrate down --migrations-dir migrations --database-url $DATABASE_URL"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^17.4.2",
+    "express": "~4.16.1",
+    "express-rate-limit": "^8.5.2",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "nanoid": "^5.1.11",
+    "node-pg-migrate": "^8.0.4",
+    "pg": "^8.21.0",
+    "pg-promise": "^12.6.2",
+    "pug": "2.0.0-beta11",
+    "rate-limit-redis": "^5.0.0",
+    "redis": "^6.0.0"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^11.0.0"
+  }
+}

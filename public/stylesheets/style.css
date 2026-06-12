@@ -1,0 +1,98 @@
+:root{
+  --charcoal-blue : #264653;
+  --verdegris : #219d8f;
+  --jasmine : #e9c46a;
+  --sandy-brown : #f4a261;
+  --burnt-peach : #e76f51;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: var(--charcoal-blue);
+  font-size: 1rem;
+}
+
+
+.container {
+  display: block;
+  width: 70%;
+  margin: 10vh auto auto;
+  padding: 2% 2% 4% 2%;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fcfcf9;
+  box-shadow: 0 20px 40px #202526;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: var(--sandy-brown);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  height: 56px;
+  padding: 0 16px;
+  border: 2px solid var(--verdegris);
+  border-radius: 14px;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.2s ease;
+}
+
+input:focus {
+  border-color: var(--verdegris);
+  box-shadow: 0 0 0 4px rgba(33, 157, 143, 0.2);
+}
+
+
+button {
+  height: 56px;
+  width: 40%;
+  margin: auto;
+  padding: 20px;
+  border: none;
+  border-radius: 14px;
+  color: white;
+  font-size: 1rem;
+  background: var(--sandy-brown);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: var(--burnt-peach);
+  transform: translateY(-2px);
+}
+
+.result {
+  width: fit-content;
+  margin: 2rem auto auto;
+  color: var(--verdegris);
+  text-align: left;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+a {
+  font-size: 1.5rem;
+  color: var(--burnt-peach);
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 URL Shortener
+
+  form(action="/shorten" method="POST" class="inputGroup")
+    input(
+      type="text"
+      name="url"
+      placeholder="Enter your long URL"
+      pattern="(https?:\/\/)?(www\.)?([A-Za-z0-9-]+\.)+[A-Za-z]{2,}(\/.*)?"
+      required
+      )
+    button(type="submit") Shorten
+
+  if shortUrl
+    .result
+      h2 Your short URL:
+      a(href=shortUrl)= shortUrl
